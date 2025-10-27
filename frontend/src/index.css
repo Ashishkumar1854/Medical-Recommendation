@@ -1,0 +1,29 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 5s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0% { top: -10%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: 110%; opacity: 0; }
+}
+.animate-scan {
+  animation: scan 4s linear infinite;
+}

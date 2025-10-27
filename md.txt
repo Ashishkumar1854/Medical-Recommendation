@@ -1,0 +1,36 @@
+Personalized-Medical-Recommendation-System/
+│
+├── aiml/
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── routes.py
+│   │   ├── helpers.py
+│   │   └── model_utils.py
+│   │
+│   ├── datasets/
+│   │   ├── description.csv
+│   │   ├── diets.csv
+│   │   ├── medications.csv
+│   │   ├── precautions_df.csv
+│   │   ├── symtoms_df.csv
+│   │   ├── workout_df.csv
+│   │   └── Training.csv
+│   │
+│   ├── models/
+│   │   └── svc.pkl
+│   │
+│   ├── run.py
+│   ├── requirements.txt
+│   └── venv/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── axios.js
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── App.jsx
+│   ├── package.json
+│   └── vite.config.js
+│
+└── md.txt
