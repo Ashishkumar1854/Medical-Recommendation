@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/logo.png"; // ✅ Your logo path
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,13 +15,15 @@ export default function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Left Section: Logo + NavLinks */}
+      {/* === Left Section: Logo + Nav Links === */}
       <div className="flex items-center gap-8">
-        <Link
-          to="/"
-          className="text-2xl font-extrabold text-blue-600 tracking-tight"
-        >
-          Health<span className="text-green-500">AI</span>
+        {/* Logo */}
+        <Link to="/" className="flex items-center space-x-2">
+          <img
+            src={logo}
+            alt="HealthAI Logo"
+            className="h-12 w-12 rounded-full object-cover border-2 border-blue-500 shadow-md hover:scale-105 hover:shadow-blue-400/50 transition-all duration-300"
+          />
         </Link>
 
         {/* Desktop Nav Links */}
@@ -38,12 +41,14 @@ export default function Header() {
         </ul>
       </div>
 
-      {/* Right Section (for future - login, profile, search) */}
+      {/* === Right Section (future space - login, profile, etc.) === */}
       <div className="hidden md:flex items-center space-x-4">
-        <button className="text-gray-700 hover:text-blue-600">Search 🔍</button>
+        <button className="text-gray-700 hover:text-blue-600 transition-colors">
+          Search 🔍
+        </button>
       </div>
 
-      {/* Mobile Menu Button */}
+      {/* === Mobile Menu Button === */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="md:hidden text-gray-700 focus:outline-none"
@@ -51,7 +56,7 @@ export default function Header() {
         {isOpen ? <X size={26} /> : <Menu size={26} />}
       </button>
 
-      {/* Mobile Sidebar Menu */}
+      {/* === Mobile Sidebar Menu === */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -62,7 +67,11 @@ export default function Header() {
             transition={{ duration: 0.4 }}
           >
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold text-blue-600">Menu</h2>
+              <img
+                src={logo}
+                alt="Logo"
+                className="h-8 w-8 object-contain drop-shadow-md"
+              />
               <X
                 size={24}
                 onClick={() => setIsOpen(false)}
