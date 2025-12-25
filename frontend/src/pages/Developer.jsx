@@ -22,7 +22,7 @@ export default function Developer() {
         <p className="text-gray-700 text-lg leading-relaxed mb-4">
           I specialize in predictive analytics, NLP, and data-driven
           personalization, combining deep learning with modern web development
-          for scalable and human-centered outcomes.
+          for scalable and human-centered outcome.
         </p>
         <p className="text-gray-700 text-lg leading-relaxed">
           This platform reflects my vision to integrate AI with healthcare,
